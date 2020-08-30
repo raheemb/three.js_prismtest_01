@@ -1,5 +1,6 @@
 let container;
 let camera;
+let controls;
 let renderer;
 let scene;
 let prism;
@@ -33,6 +34,8 @@ const createCamera = () => {
 
     camera = new THREE.PerspectiveCamera( 50, container.clientWidth / container.clientHeight, 0.1, 200 );
     camera.position.z = 20;
+
+    controls = new THREE.OrbitControls( camera, container );
 }
 
 
